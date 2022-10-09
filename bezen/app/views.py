@@ -13,7 +13,7 @@ from django.shortcuts import get_object_or_404
 
 class Index(TemplateView):
     context = {}
-    template_name = 'app/index.html'
+    template_name = 'index.html'
 
     def get(self, request, *args, **kwargs):
         user = request.user.id
@@ -28,7 +28,7 @@ class Index(TemplateView):
 class UploadRecipe(TemplateView):
     form_class = UploadRecipeForm
     context = {}
-    template_name = 'recipes/uploadrecipe.html'
+    template_name = 'uploadrecipe.html'
 
     def get(self,request,*args,**kwargs):
         user = request.user
@@ -47,7 +47,7 @@ class UploadRecipe(TemplateView):
 
 @method_decorator(login_required(login_url='login'), name='dispatch')
 class Recipe(TemplateView):
-    template_name = 'recipes/recipe.html'
+    template_name = 'recipe.html'
     context ={}
 
     def get(self,request,*args,**kwargs):
@@ -69,7 +69,7 @@ class Recipe(TemplateView):
 class EditRecipe(TemplateView):
     form_class = UploadRecipeForm
     context = {}
-    template_name = 'recipes/uploadrecipe.html'
+    template_name = 'uploadrecipe.html'
 
     def get(self, request, *args, **kwargs):
         id = kwargs.get('id')

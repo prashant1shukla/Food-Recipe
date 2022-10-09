@@ -10,6 +10,6 @@ urlpatterns = [
     path('createrecipe',views.UploadRecipe.as_view(),name="uploadrecipe"),
     path('editrecipe/<int:id>',views.EditRecipe.as_view(),name="editrecipe"),
     path('deleterecipe/<int:id>',views.DeleteRecipe.as_view(),name='deleterecipe'),
-    path('viewrecipe/<int:id>/',views.ViewRecipe.as_view(),name="viewrecipe"),
+    path('viewrecipe/<int:id>/',views.Recipe.as_view(),name="viewrecipe"),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
