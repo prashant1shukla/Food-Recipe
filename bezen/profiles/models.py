@@ -5,6 +5,8 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
+        first_name= models.CharField(max_length=100, default='Ram')
+        last_name= models.CharField(max_length=100, default='Shukla')
         user = models.OneToOneField(User,on_delete=models.CASCADE)
         profile_pic = models.ImageField(upload_to='images',null=True)
         bio = models.CharField(max_length=120)
