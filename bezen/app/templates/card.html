@@ -20,7 +20,7 @@
             <img src="/media/{{obj.recipe_pic}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{obj.recipe_name}}</h5>
-              <p class="card-text">Created by:  {{obj.last_name}}</p>
+              <p class="card-text">Created by:  {{obj.created_by}}</p>
               <a href="{% url 'viewrecipe' obj.id %}" class="btn btn-outline-success" id="bt">View</a>
             </div>
           </div>
