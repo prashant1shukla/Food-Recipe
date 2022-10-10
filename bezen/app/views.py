@@ -24,7 +24,7 @@ class Index(TemplateView):
         return render(request,self.template_name , self.context)
 
 
-@method_decorator(login_required(login_url='login'), name='dispatch')
+@method_decorator(login_required(login_url='profiles/login'), name='dispatch')
 class UploadRecipe(TemplateView):
     form_class = UploadRecipeForm
     context = {}

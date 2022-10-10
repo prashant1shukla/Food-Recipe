@@ -12,7 +12,7 @@
     <form method="post" novalidate enctype="multipart/form-data">
         {% csrf_token %}
         <h3>create profile</h3>
-        {% include 'home/form.html' with form=form %}
+        {% include 'form.html' with form=form %}
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

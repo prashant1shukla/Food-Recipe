@@ -12,7 +12,7 @@ from django.utils.decorators import method_decorator
 
 class UserHome(TemplateView):
     model = Profile
-    template_name = 'app/index.html'
+    template_name = 'index.html'
     context = {}
 
     def get_object(self,user):
@@ -36,7 +36,7 @@ class UserRegister(TemplateView):
     model = User
     form_class = UserRegistrationForm
     context = {}
-    template_name = 'profiles/register.html'
+    template_name = 'register.html'
 
     def get(self,request,*args,**kwargs):
         self.context['form'] = self.form_class()
@@ -55,7 +55,7 @@ class UserRegister(TemplateView):
 class SignIn(TemplateView):
     form_class = LoginForm
     context = {}
-    template_name = 'profiles/login.html'
+    template_name = 'login.html'
 
     def get(self,request,*args,**kwargs):
         self.context['form'] = self.form_class()
@@ -79,7 +79,7 @@ class SignIn(TemplateView):
 class CreateProfile(TemplateView):
     form_class = CreateProfileForm
     context = {}
-    template_name = 'profiles/profilecreate.html'
+    template_name = 'profilecreate.html'
 
     def get(self,request,*args,**kwargs):
         form = self.form_class(initial={'user':request.user})
@@ -99,12 +99,12 @@ class CreateProfile(TemplateView):
 class SignOut(TemplateView):
     def get(self,request,*args,**kwargs):
         logout(request)
-        return redirect('home')
+        return redirect('index')
 
 
 class ViewProfile(TemplateView):
     context = {}
-    template_name = 'profiles/profileview.html'
+    template_name = 'profileview.html'
 
     def get(self,request,*args,**kwargs):
         user_id = request.user.id
@@ -122,7 +122,7 @@ class ViewProfile(TemplateView):
 class EditProfile(TemplateView):
     context = {}
     form_class = CreateProfileForm
-    template_name = 'profiles/profileedit.html'
+    template_name = 'profileedit.html'
 
     def get_object(self,request):
         return Profile.objects.get(user = request.user)
