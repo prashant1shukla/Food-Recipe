@@ -18,7 +18,49 @@
 <body>
 <!--navbar-->
 {% include 'nav.html' %}
-<img src="{% static 'images/bgimg2.jpeg' %}" class="img-fluid" style="background-image">
+<div class="figure; magrin:0 auto">
+    {% comment %} <img src="{% static 'img1.jpg' %}"> {% endcomment %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static '1i.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '2i.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static '3i.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+</div>
+<pre> 
+
+
+</pre>
+<div class="col text-center">
+  <div class="section_title">
+    <h2>Add your Mesmorising Recipes</h2>
+  </div>
+</div>
+<pre> 
+
+</pre>
+
 <!--bio-->
 <div class="container">
     <div class="row">
@@ -26,7 +68,7 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="/{{profile.profile_pic}}" alt="...">
+                        <img src="/media/{{profile.profile_pic}}" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -40,7 +82,7 @@
         </div>
         <div class="col-6">
             <a href="{% url 'uploadrecipe' %}">
-            <img src="{% static 'index/images/share.png' %}">
+            <img src="{% static 'a1.png' %}"style="max-width: 100%;">
             </a>
         </div>
     </div>

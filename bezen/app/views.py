@@ -39,7 +39,7 @@ class UploadRecipe(TemplateView):
         form = self.form_class(data=request.POST,files=request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('viewprofile')
+            return redirect('profileview')
         else:
             self.context['form'] = form
             return render(request,self.template_name,self.context)
@@ -84,7 +84,7 @@ class EditRecipe(TemplateView):
         form = self.form_class(instance=recipes,data=request.POST,files=request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('viewprofile')
+            return redirect('profileview')
         else:
             self.context['form']=form
             return render(request,self.template_name,self.context)
@@ -96,5 +96,5 @@ class DeleteRecipe(TemplateView):
         id = kwargs.get('id')
         recipes = get_object_or_404(recipe, pk=id)
         recipes.delete()
-        return redirect('viewprofile')
+        return redirect('profileview')
 

@@ -4,10 +4,10 @@
       {% if obj.created_by == request.user %}
         <div class="col-3">
           <div class="card h-100" style="width: 18rem;">
-            <img src="/{{obj.recipe_pic}}" class="card-img-top" alt="...">
+            <img src="/media/{{obj.recipe_pic}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{obj.recipe_name}}</h5>
-              <p class="card-text">Created by: {{obj.created_by.first_name}} {{obj.created_by.last_name}}</p>
+              <p class="card-text">Created by: {{obj.created_by}} {{obj.created_by}}</p>
               <a href="{% url 'viewrecipe' obj.pk %}" class="btn btn-outline-success" id="bt1">View</a>
               <a href="{% url 'editrecipe' obj.pk %}" class="btn btn-outline-success" id="bt2">Edit</a>
               <a href="{% url 'deleterecipe' obj.pk %}" class="btn btn-outline-success" id="bt3">Delete</a>
