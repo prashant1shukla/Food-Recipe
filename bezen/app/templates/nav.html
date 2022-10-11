@@ -1,27 +1,27 @@
 {% if request.user.is_active %}
   {% if profile %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="hover:box-shadow: inset 100px 0 0 0 #54b3d6;color: white;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home"><b>MyRecipe</b></a>
+        <a class="navbar-brand" href="home"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"><b>RecipeForAll</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         {% comment %} div class="collapse navbar-collapse" id="navbarSupportedContent"> {% endcomment %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home">Home</a>
+              <a class="nav-link active" aria-current="page" href="home" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">
                 Profile
               </a>
 
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
-                <li><a class="dropdown-item" href="{% url 'logout' %}">logout</a></li>
+                <li><a class="dropdown-item" href="{% url 'logout' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Logout</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{% url 'profileview' %}">View Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'profileview' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">View Profile</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{% url 'profileedit' %}">Edit Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'profileedit' %}" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Edit Profile</a></li>
               </ul>
             </li>
           </ul>
@@ -33,26 +33,26 @@
       </div>
     </nav>
   {% else %}
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="hover:box-shadow: inset 100px 0 0 0 #54b3d6;color: white;">
      <div class="container-fluid">
-       <a class="navbar-brand" href="home"><b>MyRecipe</b></a>
+       <a class="navbar-brand" href="home" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"><b>RecipeForAll</b></a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+             <a class="nav-link active" aria-current="page" href="{% url 'index' %}"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Home</a>
            </li>
            <li class="nav-item dropdown">
-             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">
                Profile
              </a>
 
              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
-               <li><a class="dropdown-item" href="{% url 'logout' %}">logout</a></li>
+               <li><a class="dropdown-item" href="{% url 'logout' %}"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Logout</a></li>
                <li><hr class="dropdown-divider"></li>
-               <li><a class="dropdown-item" href="{% url 'profilecreate' %}">Create Profile</a></li>
+               <li><a class="dropdown-item" href="{% url 'profilecreate' %}"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Create Profile</a></li>
 
              </ul>
            </li>
@@ -68,24 +68,24 @@
 {% else %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><b>MyRecipe</b></a>
+    <a class="navbar-brand" href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'"><b>RecipeForAll</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Index</a>
+          <a class="nav-link active" aria-current="page" href="#"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Index</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">
             Profile
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" label="profile">
-            <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+            <li><a class="dropdown-item" href="{% url 'login' %}"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Login</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{% url 'register' %}">Register</a></li>
+            <li><a class="dropdown-item" href="{% url 'register' %}"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='black'">Register</a></li>
           </ul>
         </li>
       </ul>

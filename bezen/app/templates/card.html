@@ -1,9 +1,10 @@
-<div class="container">
+<div style="background-color: #E5E4E2;">
+  <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
     {% for obj in data %}
       {% if obj.created_by == request.user %}
-        <div class="col-3">
-          <div class="card h-100" style="width: 18rem;">
+        <div class="col-3" style="margin-right: auto; margin-left: auto;">
+          <div class="card h-100" style="width: 18rem;border-radius: 15px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s">
             <img src="/media/{{obj.recipe_pic}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{obj.recipe_name}}</h5>
@@ -15,8 +16,8 @@
           </div>
         </div>
       {% else %}
-        <div class="col-3">
-          <div class="card h-100" style="width: 18rem;">
+        <div class="col-3" style="margin-right: auto; margin-left: auto;">
+          <div class="card h-100" style="width: 18rem;border-radius: 15px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s">
             <img src="/media/{{obj.recipe_pic}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{obj.recipe_name}}</h5>
@@ -29,3 +30,4 @@
     {% endfor %}
     </div>
   </div>
+</div>
